@@ -21,8 +21,8 @@ a {
 }
 
 img {
-    position: relative;
     max-width: 100%;
+    height: auto;
 }
 
 /* Header*/
@@ -457,19 +457,19 @@ input[type=search]::-ms-reveal {
     background-color: #fff;
 }
 
-a.login-link:hover {
+.login-link:hover {
     color: #ee3640;
 }
 
-a.login-link:active {
+.login-link:active {
     color: #c5c5c5;
 }
 
-a.login-link:hover path, a.login-link:hover polygon {
+.login-link:hover path, a.login-link:hover polygon {
     fill: #000;
 }
 
-a.login-link:active path, a.login-link:active polygon {
+.login-link:active path, a.login-link:active polygon {
     fill: #c5c5c5;
 }
 
@@ -481,15 +481,15 @@ a.login-link:active path, a.login-link:active polygon {
     padding-bottom: 10px;
 }
 
-a.registration:hover {
+.registration:hover {
     color: #ee3640;
 }
 
-a.registration:active {
+.registration:active {
     color: #c5c5c5;
 }
 
-a.login-link {
+.login-link {
     position: relative;
     padding-bottom: 10px;
     padding-top: 12px;
@@ -824,7 +824,7 @@ a.login-link {
     background-position: 0 0;
 }
 
-a.catalog-open {
+.slides .catalog-open {
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 14px;
     line-height: 38px;
@@ -940,7 +940,7 @@ a.catalog-open {
     color: #fff;
 }
 
-h4.for-block-4 {
+.for-block-4 {
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 36px;
     font-weight: bold;
@@ -1590,7 +1590,8 @@ h4.for-block-4 {
 .footer-top-columns .site-name-footer:active {
     background-color: #ba2632;
 }
-.footer-top .footer-adress a, .footer-top .footer-adress span {
+.footer-top .footer-adress a, 
+.footer-top .footer-adress span {
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -1657,7 +1658,7 @@ h4.for-block-4 {
     align-items: center;
 }
 
-ul.footer-list {
+.footer-list {
     margin: 0;
 }
 
@@ -1989,7 +1990,7 @@ ul.footer-list {
     left: 14px;
 }
 
-svg.logout {
+.logout {
     position: absolute;
     top: 60px;
     left: 269px;
@@ -2064,7 +2065,7 @@ svg.logout {
     color: #c5c5c5;
 }
 
-a.personal-area {
+.personal-area {
     position: relative;
 }
 
@@ -2076,7 +2077,6 @@ a.personal-area {
     height: 4px;
     content: '';
     border-radius: 50%;
-    ;
     background-color: #000;
 }
 
@@ -2197,23 +2197,23 @@ a.personal-area {
     background-color: #f7f3ec;
 }
 
-svg.up {
+.up {
     position: absolute;
     top: 15px;
     right: 49px;
 }
 
-svg.down {
+.down {
     position: absolute;
     top: 15px;
     left: 671px;
 }
 
-svg.up polygon:hover, svg.down polyline:hover {
+.up polygon:hover, svg.down polyline:hover {
     fill: #242021;
 }
 
-svg.up polygon:active, svg.down polyline:active {
+.up polygon:active, svg.down polyline:active {
     fill: #ee3543;
 }
 
@@ -2493,7 +2493,7 @@ svg.up polygon:active, svg.down polyline:active {
 }
 
 .block-middle .bar {
-    width: 70%;
+    width: 80%;
     height: 2px;
     background-color: #00ca74;
 }
@@ -2591,6 +2591,7 @@ svg.up polygon:active, svg.down polyline:active {
     top: 187px;
 }
 
+
 .catalog-checkbox span {
     margin-bottom: 13px;
 }
@@ -2631,16 +2632,13 @@ svg.up polygon:active, svg.down polyline:active {
 }
 
 .current span {
-    margin-bottom: 10px;
+    display: block;
+    margin-bottom: 13px;
 }
 
-ul.filter-current {
+.filter-current {
     margin: 0;
     padding: 0;
-}
-
-ul.filter-current {
-    padding-top: 12px;
 }
 
 .current .filter-option {
@@ -2736,7 +2734,8 @@ ul.filter-current {
     background-color: #fff;
 }
 
-.catalog-item .actions .buy, .catalog-item .actions .bookmark {
+.actions .buy, 
+.actions .bookmark {
     font-family: 'Cuprum', 'Arial', sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -2897,7 +2896,7 @@ ul.filter-current {
     margin-left: 241px;
 }
 
-ul.pagination-list {
+.pagination-list {
     padding: 0;
     margin-top: 0;
     list-style: none;
@@ -2922,13 +2921,18 @@ ul.pagination-list {
     padding-left: 30px;
 }
 
-a.activ {
+.pagination-list .activ-link {
+    display: block;
     background-color: #ee3643;
     border: 1px solid #ee3643;
     color: #fff;
 }
 
-.pagination-item a:active {
+.pagination-item a:not(.activ-link):hover{
+    border: 1px solid #bdc6ca;
+}
+
+.pagination-list .pagination-item a:active {
     border: 1px solid #ee3643;
 }
 
